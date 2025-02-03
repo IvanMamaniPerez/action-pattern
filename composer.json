@@ -17,5 +17,12 @@
       "email": "mamaniperezivan@gmail.com"
     }
   ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Hachicode\\ActionPattern\\ActionPatternServiceProvider"
+      ]
+    }
+  },
   "minimum-stability": "dev"
 }
