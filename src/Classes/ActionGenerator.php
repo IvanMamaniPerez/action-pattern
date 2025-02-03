@@ -40,10 +40,10 @@ class ActionGenerator
         return file_get_contents(__DIR__ . '/../Stubs/Action.stub');
     }
 
-    public function createFile(string $name, string $stub, bool $force): void
+    public function createFile(string $name, string $stub): void
     {
         $path = $this->getPath($name);
-        $this->createDirectory($path, $force);
+        $this->createDirectory($path);
 
         $nameParts  = explode('/', $name);
         $nameParts  = array_map('ucwords', $nameParts);
@@ -82,10 +82,10 @@ class ActionGenerator
         return str_contains($name, '/');
     }
 
-    public function createDirectory(string $path, bool $force): void
+    public function createDirectory(string $path): void
     {
-        if (file_exists($path) && !$force) {
-            throw new \Exception("File already exists, force the creation");
+        if (file_exists($path)) {
+            throw new \Exception("File already exists");
         }
         $directory = dirname($path);
         if (!is_dir($directory)) {
