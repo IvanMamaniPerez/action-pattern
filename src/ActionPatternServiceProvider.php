@@ -10,7 +10,7 @@ class ActionPatternServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/action-pattern.php' => config_path('action-pattern.php'),
+            __DIR__ . '/config/action-pattern.php' => config_path('action-pattern.php'),
         ], 'config');
 
         if ($this->app->runningInConsole()) {
@@ -22,6 +22,6 @@ class ActionPatternServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/action-pattern.php', 'action-pattern');
+        $this->mergeConfigFrom(__DIR__ . '/config/action-pattern.php', 'action-pattern');
     }
 }
