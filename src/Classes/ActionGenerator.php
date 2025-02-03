@@ -43,10 +43,14 @@ class ActionGenerator
     public function createFile(string $name, string $stub): void
     {
         $path = $this->getPath($name);
+
         $this->createDirectory($path);
 
         $nameParts  = explode('/', $name);
         $nameParts  = array_map('ucwords', $nameParts);
+
+        array_pop($nameParts);
+
         $studlyName = implode('\\', $nameParts);
 
         $namespace = config('action-pattern.generate-class.namespace');
