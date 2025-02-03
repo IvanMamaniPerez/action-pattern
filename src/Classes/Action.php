@@ -2,8 +2,8 @@
 
 namespace Hachicode\ActionPattern\Classes;
 
-use Interfaces\ActionInterface;
-use Traits\ActionTrait;
+use Hachicode\ActionPattern\Interfaces\ActionInterface;
+use Hachicode\ActionPattern\Traits\ActionTrait;
 
 abstract class Action  implements ActionInterface
 {
