@@ -16,5 +16,6 @@
       "name": "Ivan Mamani Perez",
       "email": "mamaniperezivan@gmail.com"
     }
-  ]
+  ],
+  "minimum-stability": "dev"
 }
