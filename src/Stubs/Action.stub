@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Actions{{namespace}};
+use Ivan\ActionPattern\Classes\Action;
+
+class {{class}} extends Action
+{
+    /**
+     * Execute the action
+     *
+     * @return mixed
+     */
+    public function handle() : mixed
+    {
+        // Set your logic
+    }
+}

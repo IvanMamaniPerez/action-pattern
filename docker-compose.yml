@@ -1,0 +1,8 @@
+name: library_command_pattern
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - .:/var/www

@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Actions{{namespace}};
+
+use Illuminate\Support\Facades\Validator;
+use Ivan\ActionPattern\Classes\ActionValidated;
+
+class {{class}} extends ActionValidated
+{
+    /**
+    * @param array $data Is the validated result from method validation
+    */
+    public function handle(array $data): mixed
+    {
+        // Execute your logic with your data validated
+    }
+
+    public function validation(array $data): array
+    {
+        $validator = Validator::make($data, [
+            // Set your rules
+        ]);
+
+        if ($validator->fails()) {
+            throw new \Exception(message: 'Validation failed in {{class}} action', errors: $validator->errors());
+        }
+
+        return $validator->validated();
+    }
+}
