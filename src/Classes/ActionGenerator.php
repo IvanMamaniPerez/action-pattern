@@ -52,12 +52,12 @@ class ActionGenerator
         $namespace = config('action-pattern.generate-class.namespace');
 
         $namespace = $this->hasCustomNamespace($name)
-            ? 'namespace ' . $namespace . '\\' .  $studlyName . ';'
-            : 'namespace ' . $namespace . ';';
+            ? $namespace . '\\' .  $studlyName . ';'
+            : $namespace . ';';
 
 
         $name = class_basename($name);
-        
+
         $stub = str_replace(
             ['{{namespace}}', '{{class}}'],
             [$namespace,   $name],
