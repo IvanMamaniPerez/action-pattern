@@ -40,10 +40,10 @@ class ActionGenerator
         return file_get_contents(__DIR__ . '/../Stubs/Action.stub');
     }
 
-    public function createFile(string $name, string $stub): void
+    public function createFile(string $name, string $stub, bool $force): void
     {
         $path = $this->getPath($name);
-        $this->createDirectory($path);
+        $this->createDirectory($path, $force);
 
         $nameParts  = explode('/', $name);
         $nameParts  = array_map('ucwords', $nameParts);
@@ -51,10 +51,11 @@ class ActionGenerator
 
         $namespace = config('action-pattern.generate-class.namespace');
 
-        $namespace = $this->hasCustomNamespace($name)
-            ? $namespace . '\\' .  $studlyName . ';'
-            : $namespace . ';';
+        $studlyNamespace = ucwords(str_replace('/', '\\', $namespace));
 
+        $namespace = $this->hasCustomNamespace($name)
+            ? $studlyNamespace . '\\' .  $studlyName . ';'
+            : $studlyNamespace . ';';
 
         $name = class_basename($name);
 
@@ -70,6 +71,7 @@ class ActionGenerator
     public function getPath(string $name): string
     {
         $path = config('action-pattern.generate-class.namespace');
+        $path = str_replace('\\', '/', $path);
         $name = str_replace('\\', '/', $name);
 
         return $path . '/' . $name . '.php';
@@ -80,8 +82,11 @@ class ActionGenerator
         return str_contains($name, '/');
     }
 
-    public function createDirectory(string $path): void
+    public function createDirectory(string $path, bool $force): void
     {
+        if (file_exists($path) && !$force) {
+            throw new \Exception("File already exists, force the creation");
+        }
         $directory = dirname($path);
         if (!is_dir($directory)) {
             mkdir($directory, 0755, true);
