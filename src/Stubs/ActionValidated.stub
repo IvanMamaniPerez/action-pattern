@@ -13,7 +13,7 @@ class {{class}} extends ActionValidated
     public function handle(array $data): mixed
     {
         // Execute your logic with your data validated
-        return $data
+        return $data;
     }
 
     public function validation(array $data): array
@@ -23,7 +23,7 @@ class {{class}} extends ActionValidated
         ]);
 
         if ($validator->fails()) {
-            throw new \Exception(message: 'Validation failed in {{class}} action', errors: $validator->errors());
+            throw new \Exception(message: 'Validation failed in {{class}} action' . collect($validator->errors())->join(', '));
         }
 
         return $validator->validated();
