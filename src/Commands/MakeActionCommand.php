@@ -1,8 +1,8 @@
 <?php
 
-namespace Commands;
+namespace Hachicode\ActionPattern\Commands;
 
-use Classes\ActionGenerator;
+use Hachicode\ActionPattern\Classes\ActionGenerator;
 use Illuminate\Console\Command;
 
 class MakeActionCommand extends Command

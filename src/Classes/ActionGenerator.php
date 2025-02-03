@@ -1,6 +1,6 @@
 <?php
 
-namespace Classes;
+namespace Hachicode\ActionPattern\Classes;
 
 class ActionGenerator
 {

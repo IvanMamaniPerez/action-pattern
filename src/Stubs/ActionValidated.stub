@@ -3,7 +3,7 @@
 namespace App\Actions{{namespace}};
 
 use Illuminate\Support\Facades\Validator;
-use Ivan\ActionPattern\Classes\ActionValidated;
+use Hachicode\ActionPattern\Classes\ActionValidated;
 
 class {{class}} extends ActionValidated
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Interfaces;
+namespace Hachicode\ActionPattern\Interfaces;
 
 interface ActionValidatedInterface extends ActionInterface
 {

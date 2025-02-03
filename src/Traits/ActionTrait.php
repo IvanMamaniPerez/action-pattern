@@ -1,9 +1,9 @@
 <?php
 
-namespace Traits;
+namespace Hachicode\ActionPattern\Traits;
 
-use Exceptions\ActionException;
-use Interfaces\ActionValidatedInterface;
+use Hachicode\ActionPattern\Exceptions\ActionException;
+use Hachicode\ActionPattern\Interfaces\ActionValidatedInterface;
 
 trait ActionTrait
 {

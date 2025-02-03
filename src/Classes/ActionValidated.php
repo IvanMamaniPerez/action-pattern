@@ -1,9 +1,9 @@
 <?php
 
-namespace Classes;
+namespace Hachicode\ActionPattern\Classes;
 
-use Interfaces\ActionValidatedInterface;
-use Traits\ActionTrait;
+use Hachicode\ActionPattern\Interfaces\ActionValidatedInterface;
+use Hachicode\ActionPattern\Traits\ActionTrait;
 
 abstract class ActionValidated  implements ActionValidatedInterface {
     use ActionTrait;

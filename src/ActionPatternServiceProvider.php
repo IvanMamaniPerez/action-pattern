@@ -1,8 +1,8 @@
 <?php
 
-namespace Ivan\ActionPattern;
+namespace Hachicode\ActionPattern;
 
-use Commands\MakeActionCommand;
+use Hachicode\ActionPattern\Commands\MakeActionCommand;
 use Illuminate\Support\ServiceProvider;
 
 class ActionPatternServiceProvider extends ServiceProvider
