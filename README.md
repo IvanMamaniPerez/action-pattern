@@ -30,17 +30,11 @@ Generate command with validation
 php artisan make:action LoginValidatedAction --validated
 ```
 
-Execute the command 
-```php
-use App\Actions\LoginValidatedAction;
-
-...
-
 LoginValidatedAction::run();
 
 ```
 
-#### Structure the classes
+#### Structure the classes generated
 
 ##### Action simple
 ```php
@@ -100,3 +94,9 @@ class LoginValidatedAction extends ActionValidated
 }
 
 ```
+
+
+Execute the action 
+```php
+use App\Actions\LoginValidatedAction;
+...
