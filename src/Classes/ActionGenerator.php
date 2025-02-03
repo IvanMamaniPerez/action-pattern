@@ -55,9 +55,12 @@ class ActionGenerator
             ? 'namespace ' . $namespace . '\\' .  $studlyName . ';'
             : 'namespace ' . $namespace . ';';
 
+
+        $name = class_basename($name);
+        
         $stub = str_replace(
             ['{{namespace}}', '{{class}}'],
-            [$namespace, $name],
+            [$namespace,   $name],
             $stub
         );
 
