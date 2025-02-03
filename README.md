@@ -8,7 +8,6 @@ This package implements a basic action pattern, based in command pattern using t
 
 
 ### Instructions
-> Important!: Actually the package is in develop, should use with caution.
 
 ```bash 
 composer require hachicode/action-pattern
@@ -28,10 +27,6 @@ php artisan make:action LoginAction
 Generate command with validation
 ```bash 
 php artisan make:action LoginValidatedAction --validated
-```
-
-LoginValidatedAction::run();
-
 ```
 
 #### Structure the classes generated
@@ -60,7 +55,6 @@ class LoginAction extends Action
 ##### Action validated
 
 ```php
-<?php
 
 namespace App\Actions;
 
@@ -99,4 +93,8 @@ class LoginValidatedAction extends ActionValidated
 Execute the action 
 ```php
 use App\Actions\LoginValidatedAction;
+
+// ...
+
+LoginValidatedAction::run();
 ...
