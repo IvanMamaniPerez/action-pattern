@@ -13,6 +13,7 @@ class {{class}} extends ActionValidated
     public function handle(array $data): mixed
     {
         // Execute your logic with your data validated
+        return $data
     }
 
     public function validation(array $data): array

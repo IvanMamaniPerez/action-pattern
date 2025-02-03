@@ -1,6 +1,7 @@
 <?php
 
-namespace {{namespace}};
+namespace {{namespace}}
+
 use Hachicode\ActionPattern\Classes\Action;
 
 class {{class}} extends Action
@@ -10,8 +11,9 @@ class {{class}} extends Action
      *
      * @return mixed
      */
-    public function handle() : mixed
+    public function handle(array $data) : mixed
     {
         // Set your logic
+        return $data;
     }
 }
