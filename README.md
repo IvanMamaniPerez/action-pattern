@@ -11,5 +11,5 @@ This package implements a basic action pattern, based in command pattern.
 > Important!: Actually the package is in develop, should use with caution.
 
 ```bash 
-composer require ivan/action-pattern
+composer require hachicode/action-pattern
 ```

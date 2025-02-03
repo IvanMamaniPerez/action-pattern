@@ -1,5 +1,5 @@
 {
-  "name": "ivan/action-pattern",
+  "name": "hachicode/action-pattern",
   "description": "This package implements actions for Laravel 11 based in Command pattern for execute functions in the granular way",
   "type": "library",
   "require": {
