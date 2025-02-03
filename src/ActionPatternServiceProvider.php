@@ -2,7 +2,7 @@
 
 namespace Ivan\ActionPattern;
 
-use App\Console\Commands\MakeActionCommand;
+use Commands\MakeActionCommand;
 use Illuminate\Support\ServiceProvider;
 
 class ActionPatternServiceProvider extends ServiceProvider

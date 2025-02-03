@@ -2,8 +2,6 @@
 
 namespace Classes;
 
-use Classes\Actions\Action;
-
 class ActionGenerator
 {
     public function __construct(

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Commands;
 
 use Classes\ActionGenerator;
 use Illuminate\Console\Command;

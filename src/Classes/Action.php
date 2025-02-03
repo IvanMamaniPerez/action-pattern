@@ -1,6 +1,6 @@
 <?php
 
-namespace Classes\Actions;
+namespace Classes;
 
 use Interfaces\ActionInterface;
 use Traits\ActionTrait;
