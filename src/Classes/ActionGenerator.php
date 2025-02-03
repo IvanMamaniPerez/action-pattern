@@ -32,12 +32,12 @@ class ActionGenerator
 
     public function getValidatedStub(): string
     {
-        return file_get_contents(__DIR__ . '/../stubs/ActionValidated.stub');
+        return file_get_contents(__DIR__ . '/../Stubs/ActionValidated.stub');
     }
 
     public function getActionStub(): string
     {
-        return file_get_contents(__DIR__ . '/../stubs/Action.stub');
+        return file_get_contents(__DIR__ . '/../Stubs/Action.stub');
     }
 
     public function createFile(string $name, string $stub): void

@@ -11,7 +11,7 @@ class ActionPatternServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/Config/action-pattern.php' => config_path('action-pattern.php'),
-        ], 'config');
+        ], 'action-pattern-config');
 
         if ($this->app->runningInConsole()) {
             $this->commands([

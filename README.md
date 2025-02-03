@@ -13,3 +13,7 @@ This package implements a basic action pattern, based in command pattern.
 ```bash 
 composer require hachicode/action-pattern
 ```
+
+```bash 
+php artisan vendor:publish --tag=action-pattern-config
+```
