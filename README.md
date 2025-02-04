@@ -79,7 +79,7 @@ class LoginValidatedAction extends ActionValidated
         ]);
 
         if ($validator->fails()) {
-            throw new \Exception(message: 'Validation failed in {{class}} action' . 
+            throw new \Exception(message: 'Validation failed in LoginValidatedAction action' . 
             collect($validator->errors())->join(', '));
         }
 
