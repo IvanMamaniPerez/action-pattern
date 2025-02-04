@@ -1,9 +1,5 @@
 FROM alpine:3.20
 
-# This arguments should be sync with the PHP version you want to use
-ARG PHP_VERSION_USE_APK=83
-ARG PHP_VERSION=8.3
-
 WORKDIR /var/www
 
 # Essentials
