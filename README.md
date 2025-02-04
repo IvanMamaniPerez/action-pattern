@@ -96,5 +96,5 @@ use App\Actions\LoginValidatedAction;
 
 // ...
 
-LoginValidatedAction::run($data);
+$result = LoginValidatedAction::run($data);
 ...
