@@ -3,7 +3,7 @@
   "description": "This package implements actions for Laravel 11 based in Command pattern for execute functions in the granular way",
   "type": "library",
   "require": {
-    "laravel/framework": "^11.0"
+    "laravel/framework": "^11.0 || ^12.0"
   },
   "license": "MIT",
   "autoload": {
